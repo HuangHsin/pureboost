@@ -1,0 +1,212 @@
+﻿body{
+	background: #000;
+}
+
+.section{
+	background: url(../img/KV.png);	
+	//background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	//position: relative;
+	//width: 100%;
+	//height: 686px;
+	@include Item(1336,686,0,'auto','auto','auto', 1336, 'fit', 'relative');
+	@include animation(
+					slideInDown 2s infinite linear 0s
+		);
+
+
+	
+	.pureboost{
+		@include Item(672,84,131,'auto','auto',68, 1336, 'fit', 'absolute');
+		img{
+			@include SubImgW();
+		}
+	}
+	.p1-1{
+		color: #ffffff;
+		line-height: (26,20);
+		letter-spacing: 0.05em;
+		font-weight: 300;
+		@include Item(299,58,250,'auto','auto',68, 1336, 'fit', 'absolute');
+		
+		span{
+			@include SubImgW();
+		}
+		@include animation(
+					slideInDown 2s infinite linear 0s
+		);
+	}
+	.p1-2{
+		color: #ffffff;
+		line-height: (26,20);
+		letter-spacing: 0.05em;
+		font-weight: 400;
+		@include Item(270,58,250,'auto','auto',366, 1336, 'fit', 'absolute');
+		
+		span{
+			@include SubImgW();
+		}
+		@include animation(
+					slideInDown 2s infinite linear 0s
+		);
+	}
+	.h2{
+		@include animation(
+			slideInDown 2s infinite linear 0s
+		);
+	}
+	.scroll{
+		@include Item(17,41,'auto','auto',10,685, 1336, 'fit', 'absolute');
+		img{
+			@include SubImgW();
+		}
+		@include animation(
+			slideInDown 2s infinite linear 0s
+		);
+	}
+}
+
+.section2{
+	background: url(../img/A.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	@include Item(1336,670,0,'auto','auto','auto', 1336, 'fit', 'relative');
+
+	@include animation(
+			pulse 2s infinite linear 0s
+		);	
+		
+	.p2-1{
+		@include Item(538,30,185,'auto','auto',70, 1336, 'fit', 'absolute');
+		img{
+			@include SubImgW();
+		}
+	}
+	.p2-2{
+		color: #ffffff;
+		@include Item(538,30,250,'auto','auto',70, 1336, 'fit', 'absolute');
+		line-height: em(26,19);
+		letter-spacing: 0.05em;
+		font-weight: 100;
+		span{
+			@include SubImgW();
+		}
+		@include animation(
+			slideInDown 2s infinite linear 0s
+		);
+	}
+}
+.section3{
+	background: url(../img/B.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	@include Item(1336,675,0,'auto','auto','auto', 1336, 'fit', 'relative')
+	@include animation(
+			fadeInUp 2s infinite linear 0s
+		);
+	
+	.p3-1{
+		@include Item(403,30,151,77,'auto','auto', 1336, 'fit', 'absolute')
+		img{
+			@include SubImgW();
+		}
+	}
+	.p3-2{
+		color: #ffffff;
+		@include Item(351,107,219,77,'auto','auto', 1336, 'fit', 'absolute')
+		line-height: em(26,19);
+		letter-spacing: 0.05em;
+		font-weight: 100;
+		text-align: right;
+		span{
+			@include SubImgW();
+		}
+		@include animation(
+			fadeInUp 2s infinite linear 0s
+		);
+	}
+}
+.section4{
+	background: url(../img/C.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	@include Item(1336,671,0,'auto','auto','auto', 1336, 'fit', 'relative')
+	@include animation(
+			fadeInDown 2s infinite linear 0s
+		);
+
+	.p4-1{
+		@include Item(312,29,379,'auto','auto',71, 1336, 'fit', 'absolute')
+		img{
+			@include SubImgW();
+		}
+	}
+	.p4-2{
+		color: #ffffff;
+		@include Item(248,95,439,'auto','auto',71, 1336, 'fit', 'absolute')
+		line-height: em(26,19);
+		letter-spacing: 0.05em;
+		font-weight: 100;
+		span{
+			@include SubImgW();
+		}
+		@include animation(
+			fadeInUp 2s infinite linear 0s
+		);
+	}
+}
+.section5{
+	background: url(../img/D.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	@include Item(1336,684,0,'auto','auto','auto', 1336, 'fit', 'relative')
+	@include animation(
+			fadeInUp 2s infinite linear 0s
+		);
+
+	.p5-1{
+		@include Item(324,35,403,73,'auto','auto', 1336, 'fit', 'absolute')
+		img{
+			@include SubImgW();
+		}
+	}
+	.p5-2{
+		color: #ffffff;
+		@include Item(313,96,474,78,'auto','auto', 1336, 'fit', 'absolute')
+		line-height: em(26,19);
+		font-weight: 100;
+	text-align: right;
+		letter-spacing: 0.05em;
+		span{
+			@include SubImgW();
+		}
+		@include animation(
+			fadeInUp 2s infinite linear 0s
+		);
+	}
+}
+.section6{
+	background-color: #000000;
+	background-repeat: no-repeat;
+	background-size: cover;
+	@include Item(1336,716,0,'auto','auto','auto', 1336, 'fit', 'relative')
+}
+
+
+@include keyframes( slideInDown )
+{
+    0% {
+	    -webkit-transform: translate3d(0, -100%, 0);
+	    transform: translate3d(0, -50%, 0);
+	    visibility: visible;
+	}
+	50% {
+	    -webkit-transform: translate3d(0, 0, 0);
+	    transform: translate3d(0, 0, 0);
+	}
+	100%{
+	    -webkit-transform: translate3d(0, -100%, 0);
+	    transform: translate3d(0, -50%, 0);
+	}
+}

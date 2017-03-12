@@ -1,0 +1,23 @@
+header {
+	background: url(../img/top.png);
+	height: 71px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-size: 100% 100%; //width height
+	position:fixed;
+	z-index: 10;
+
+		h1{
+			@include Item(66,45,12,'auto','auto',12, 1336, 'none', 'absolute');
+			img{
+			@include SubImgW();
+			}
+		}
+		.facebook{
+			@include Item(23,23,39,12,'auto','auto', 1336, 'none', 'absolute');
+			img{
+			@include SubImgW();
+			}
+		}
+}
