@@ -3,19 +3,16 @@
 }
 
 .section{
-	background: url(../img/KV.png);	
-	//background-position: center top;
-	background-repeat: no-repeat;
-	background-size: cover;
-	//position: relative;
-	//width: 100%;
-	//height: 686px;
 	@include Item(1336,686,0,'auto','auto','auto', 1336, 'fit', 'relative');
-	@include animation(
-					slideInDown 2s infinite linear 0s
-		);
 
+	.background{
+		background: url(../img/KV.png);	
+		//background-position: center top;
+		background-repeat: no-repeat;
+		background-size: cover;
+		@include Item(1336,686,0,'auto','auto','auto', 1336, 'fit', 'absolute');
 
+	}
 	
 	.pureboost{
 		@include Item(672,84,131,'auto','auto',68, 1336, 'fit', 'absolute');
@@ -33,9 +30,6 @@
 		span{
 			@include SubImgW();
 		}
-		@include animation(
-					slideInDown 2s infinite linear 0s
-		);
 	}
 	.p1-2{
 		color: #ffffff;
@@ -47,14 +41,6 @@
 		span{
 			@include SubImgW();
 		}
-		@include animation(
-					slideInDown 2s infinite linear 0s
-		);
-	}
-	.h2{
-		@include animation(
-			slideInDown 2s infinite linear 0s
-		);
 	}
 	.scroll{
 		@include Item(17,41,'auto','auto',10,685, 1336, 'fit', 'absolute');
@@ -65,17 +51,36 @@
 			slideInDown 2s infinite linear 0s
 		);
 	}
+
+	&.on{
+		.background{
+			@include animation(
+				slideInDown 2s 1 linear 0s forwards
+			);
+		}
+		.p1-1{
+			@include animation(
+				slideInDown 2s 1 linear 0s forwards
+			);
+		}
+		.p1-2{
+			@include animation(
+				slideInDown 2s 1 linear 0s forwards
+			);
+		}
+
+	}
 }
 
 .section2{
-	background: url(../img/A.png);
-	background-repeat: no-repeat;
-	background-size: cover;
 	@include Item(1336,670,0,'auto','auto','auto', 1336, 'fit', 'relative');
-
-	@include animation(
-			pulse 2s infinite linear 0s
-		);	
+	.background2{
+		background: url(../img/A.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		@include Item(1336,670,0,'auto','auto','auto', 1336, 'fit', 'absolute');
+		
+	}	
 		
 	.p2-1{
 		@include Item(538,30,185,'auto','auto',70, 1336, 'fit', 'absolute');
@@ -92,19 +97,32 @@
 		span{
 			@include SubImgW();
 		}
-		@include animation(
-			slideInDown 2s infinite linear 0s
-		);
+		
+	}
+	&.on{
+		.background2{
+			@include animation(
+				pulse 2s 1 linear 0s forwards
+			);
+		}
+		.p2-2{
+			@include animation(
+				slideInDown 2s 1 linear 0s forwards
+			);
+		}
 	}
 }
 .section3{
-	background: url(../img/B.png);
-	background-repeat: no-repeat;
-	background-size: cover;
+	
 	@include Item(1336,675,0,'auto','auto','auto', 1336, 'fit', 'relative')
-	@include animation(
-			fadeInUp 2s infinite linear 0s
-		);
+	
+
+	.background3{
+		background: url(../img/B.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		@include Item(1336,675,0,'auto','auto','auto', 1336, 'fit', 'absolute')
+	}
 	
 	.p3-1{
 		@include Item(403,30,151,77,'auto','auto', 1336, 'fit', 'absolute')
@@ -122,19 +140,30 @@
 		span{
 			@include SubImgW();
 		}
-		@include animation(
-			fadeInUp 2s infinite linear 0s
+		
+	}
+	&.on{
+		.background3{
+			@include animation(
+			fadeInUp 2s 1 linear 0s forwards
 		);
+		}
+		.p3-2{
+			@include animation(
+			fadeInUp 2s 1 linear 0s forwards
+		);
+		}
 	}
 }
 .section4{
-	background: url(../img/C.png);
-	background-repeat: no-repeat;
-	background-size: cover;
+	
 	@include Item(1336,671,0,'auto','auto','auto', 1336, 'fit', 'relative')
-	@include animation(
-			fadeInDown 2s infinite linear 0s
-		);
+	.background4{
+		background: url(../img/C.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		@include Item(1336,671,0,'auto','auto','auto', 1336, 'fit', 'absolute')
+	}
 
 	.p4-1{
 		@include Item(312,29,379,'auto','auto',71, 1336, 'fit', 'absolute')
@@ -151,19 +180,31 @@
 		span{
 			@include SubImgW();
 		}
-		@include animation(
-			fadeInUp 2s infinite linear 0s
-		);
+		
+	}
+	&.on{
+		.background4{
+			@include animation(
+			fadeInDown 2s 1 linear 0s forwards
+			);
+		}
+		.p4-2{
+			@include animation(
+			fadeInUp 2s 1 linear 0s forwards
+			);
+		}
 	}
 }
 .section5{
-	background: url(../img/D.png);
-	background-repeat: no-repeat;
-	background-size: cover;
+	
 	@include Item(1336,684,0,'auto','auto','auto', 1336, 'fit', 'relative')
-	@include animation(
-			fadeInUp 2s infinite linear 0s
-		);
+	
+	.background5{
+		background: url(../img/D.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		@include Item(1336,684,0,'auto','auto','auto', 1336, 'fit', 'absolute')
+	}
 
 	.p5-1{
 		@include Item(324,35,403,73,'auto','auto', 1336, 'fit', 'absolute')
@@ -181,9 +222,19 @@
 		span{
 			@include SubImgW();
 		}
-		@include animation(
-			fadeInUp 2s infinite linear 0s
-		);
+		
+	}
+	&.on{
+		.background5{
+			@include animation(
+				fadeInUp 2s 1 linear 0s forwards
+			);
+		}
+		.p5-2{
+			@include animation(
+				fadeInUp 2s 1 linear 0s forwards
+			);
+		}
 	}
 }
 .section6{

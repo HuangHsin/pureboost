@@ -14,6 +14,12 @@ app.partial = {};
 var debug = /localhost[:]9000|nelson119.github.io/.test(location.href);
 
 
+var scrollTop = 0;
+
+var activeSection = '';
+
+var range = {};
+
 
 $(function(){
     app.getParam = getParam;
@@ -31,7 +37,46 @@ $(function(){
     };
     app.imageReload.init();
 
+	$('.range').each(function(){
 
+		
+		var id = $(this).attr('id');
+
+		if(!id){
+			return;
+		}
+
+		range[id] = {};
+
+		range[id].top = function(){
+			return $('#' + id).offset().top;// - $('#' + id).outerHeight() *1;
+		};
+		range[id].butt = function(){
+			return $('#' + id).offset().top + $('#' + id).outerHeight();// *2;
+		};
+		range[id].middle = function(){
+			return $('#' + id).offset().top + $('#' + id).outerHeight() / 2;// *2;
+		};
+	});
+
+	$(window).on('scroll resize', function(){
+		var currentTop = $(window).scrollTop() + $(window).height() / 3;
+		var currentButt = $(window).scrollTop() + $(window).height() / 3 * 2;
+		$('.range').each(function(i, section){
+			var sectionId = $(this).attr('id');
+			var rg = range[sectionId];
+			if(rg.middle() >= currentTop  && rg.middle() <= currentButt){
+				if(activeSection != sectionId){
+					activeSection = sectionId;
+				}
+			} 
+			if(activeSection && !$('#' + activeSection).hasClass('on')){
+				$('#' + activeSection).addClass('on').trigger('section:on')
+					.siblings().removeClass('on');
+			}
+			scrollTop = currentTop;
+		});
+	});
 });
 
 
